@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS23</title>
+</head>
+<script>
+    function chk1() 
+    {
+        let select1=document.getElementById("option1").value;
+        alert(select1);
+        if(select1 == "Red")
+        {
+            document.bgColor="Red";
+        }
+        else if(select1 == "Yellow")
+        {
+            document.bgColor="Yellow";
+        }
+        else if(select1 == "Green")
+        {
+            document.bgColor="Green";
+        }
+    }
+</script>
+<style>
+    div{
+        width: 300px;
+    }
+</style>
+<body>
+    <div class="dropdown">
+        <select name="options" onchange="chk1();" id="option1">
+            <option value="Red" >Red</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Green">Green</option>
+        </select>
+    </div>
+</body>
+
+</html>

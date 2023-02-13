@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS10</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script>
+        function pos_neg()
+        {
+            let a = parseInt(document.getElementById("Number1").value);
+            if(a > 0)
+            {
+                document.getElementById("txtanswer").value = "Positive Number";
+            }
+            else if(a == 0)
+            {
+                document.getElementById("txtanswer").value = "Neutral Number";
+            }
+            else
+            {
+                document.getElementById("txtanswer").value = "Negative Number";
+            }
+        }
+    </script>
+    <style>
+        div{
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="container justify-content-center mt-3">
+            <div class="form-group">
+                <label for="txtnumber">Number1</label>
+                <input type="number" class="form-control" id="Number1" aria-describedby="emailHelp"
+                    placeholder="Number1">
+            </div>
+            <input type="button" class="btn btn-primary" onclick="pos_neg();" value="Click me">
+            <div class="form-group mt-3">
+                <label for="txtanswer">Answer</label>
+                <input type="text" class="form-control" id="txtanswer" placeholder="Answer">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

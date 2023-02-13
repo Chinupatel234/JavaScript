@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS21</title>
+</head>
+
+<script>
+
+    function chk1()
+    {
+        let select1=document.getElementById("option1").value;
+        let n = parseInt(document.getElementById("Number1").value);
+    
+        if(select1=="Square")  
+        {
+            document.getElementById("textanswer").innerHTML = n*n;
+            document.images[0].src="/image.jpeg";
+        }
+    }
+    function chk2()
+    {
+        let select2=document.getElementById("option2").value;
+        let m = parseInt(document.getElementById("Number1").value);
+
+        if(select2=="Cube")
+        {
+            document.getElementById("textanswer").innerHTML=m*m*m;
+            document.images[0].src="/img.jpeg";
+        }
+    }
+
+</script>
+<style>
+    div{
+        width: 300px;
+    }
+</style>
+<body>
+    <div class="container justify-content-center mt-3">
+        <div class="form-group">
+            <label for="txtnumber">Number1</label>
+            <input type="number" class="form-control" id="Number1" aria-describedby="emailHelp">
+        </div>
+        <br>
+        <label class="btn btn-secondary active">
+            <input type="radio" name="options" id="option1" value="Square" onchange="chk1();" autocomplete="off"> Square
+        </label>
+        <label class="btn btn-secondary active">
+            <input type="radio" name="options" id="option2" value="Cube" onchange="chk2();" autocomplete="off"> Cube
+        </label>
+        <br>
+        <div class="form-group mt-3">
+            <label for="txtanswer">Answer = </label>
+            <span class="form-control" id="textanswer">
+        </div>
+        <img src="/image1.jpeg" height="100" width="100">
+    </div>
+</body>
+
+</html>

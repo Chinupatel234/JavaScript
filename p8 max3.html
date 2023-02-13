@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS8</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        div{
+            width: 300px;
+        }
+    </style>
+    <script>
+        function max3(){
+            let a=parseInt(document.getElementById("Number1").value);
+            let b=parseInt(document.getElementById("Number2").value);
+            let c=parseInt(document.getElementById("Number3").value);
+            if(a > b && a > c)
+            {
+                document.getElementById("txtanswer").value=a;
+            }
+            else if(b > a && b > c)
+            {
+                document.getElementById("txtanswer").value=b;
+            }
+            else if(c > a && c > b)
+            {
+                document.getElementById("txtanswer").value=c;
+            }
+            else
+            {
+                document.getElementById("txtanswer").value="All are equal";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <div class="container justify-content-center mt-3">
+            <div class="form-group">
+                <label for="txtnumber">Number1</label>
+                <input type="number" class="form-control" id="Number1" aria-describedby="emailHelp"
+                    placeholder="Number1">
+            </div>
+            <div class="form-group">
+                <label for="txtnumber">Number2</label>
+                <input type="number" class="form-control" id="Number2" aria-describedby="emailHelp"
+                    placeholder="Number2">
+            </div>
+            <div class="form-group">
+                <label for="txtnumber">Number3</label>
+                <input type="number" class="form-control" id="Number3" aria-describedby="emailHelp"
+                    placeholder="Number3">
+            </div>
+            <input type="button" class="btn btn-primary" onclick="max3();" value="Click me">
+            <div class="form-group mt-3">
+                <label for="txtanswer">Answer</label>
+                <input type="text" class="form-control" id="txtanswer" placeholder="Answer">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

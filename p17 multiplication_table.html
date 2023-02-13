@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS17</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script>
+        function for_loop2()
+        {
+            let a = parseInt(document.getElementById("Number1").value);
+            let b = "";
+            let m = 1;
+            for(let i = 1; i <= 10; i++)
+            {
+                b += a + " X " + i + "=" + a * i + "<br>";
+            }
+            document.getElementById("spananswer").innerHTML=b;
+        }
+    </script>
+    <style>                            
+        div
+        {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="container justify-content-center mt-3">
+            <div class="form-group">
+                <label for="txtnumber">Number1</label>
+                <input type="number" class="form-control" id="Number1" aria-describedby="emailHelp">
+            </div>
+            <input type="button" class="btn btn-primary" onclick="for_loop2();" value="Click me">
+            <div class="form-group mt-3">
+                <label for="txtanswer">Table</label>
+                <span id="spananswer">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

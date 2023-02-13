@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS24</title>
+</head>
+<script>
+    function chk1() 
+    {
+        let select1=document.getElementById("option1").value;
+        let number1 = parseInt(document.getElementById("Number1").value);
+        let number2 = parseInt(document.getElementById("Number2").value);
+
+        if(select1 == "+")
+        {
+            document.getElementById("txtanswer").innerHTML=number1 + number2;
+        }
+        else if(select1 == "-")
+        {
+            document.getElementById("txtanswer").innerHTML=number1 - number2;
+        }
+        else if(select1 == "*")
+        {
+            document.getElementById("txtanswer").innerHTML=number1 * number2;
+        }
+        else if(select1 == "/")
+        {
+            document.getElementById("txtanswer").innerHTML=number1 / number2;
+        }
+    }
+</script>
+<style>
+    div{
+        width: 300px;
+    }
+</style>
+<body>
+    <div class="dropdown">
+        <div class="form-group">
+            <label for="txtnumber">Number1</label>
+            <input type="number" class="form-control" id="Number1" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+            <label for="txtnumber">Number2</label>
+            <input type="number" class="form-control" id="Number2" aria-describedby="emailHelp">
+        </div>
+        <select name="options" onchange="chk1();" id="option1">
+            <option value="+">Addtion</option>
+            <option value="-">Subtraction</option>
+            <option value="*">Multiplication</option>
+            <option value="/">Division</option>
+        </select>
+        <div class="form-group mt-3">
+            <label for="txtanswer">Answer</label>
+            <span class="form-control" id="txtanswer">
+        </div>
+    </div>
+</body>
+
+</html>
